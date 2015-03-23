@@ -1,0 +1,84 @@
+﻿<div class="navbar-collapse collapse">
+    @Html.ActionLink("Director Panel", "admin_panel", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <ul class="nav navbar-nav">
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Profile
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View Profile", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Edit Profile", "About", "Home")</li>
+                        <li>@Html.ActionLink("Logout", "Contact", "Home")</li>
+                       
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        GPC
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("Assign Chair Person", "Index", "Home")</li>
+                        <li>@Html.ActionLink("View Members", "About", "Home")</li>
+                        <li>@Html.ActionLink("View Events/Meetings", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("View Requests of hire", "Contact", "Home")</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                       Purchase Requisition
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View PR", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Approved PRs", "About", "Home")</li>
+                        <li>@Html.ActionLink("Updated PRs", "Contact", "Home")</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Reports
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View Reports", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+
+</div>
+
+

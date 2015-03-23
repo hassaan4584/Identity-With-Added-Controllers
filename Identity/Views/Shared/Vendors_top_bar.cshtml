@@ -1,0 +1,83 @@
+﻿
+<div class="navbar-collapse collapse">
+    @Html.ActionLink("Director Panel", "admin_panel", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <ul class="nav navbar-nav">
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Profile
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View Profile", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Edit Profile", "About", "Home")</li>
+                        <li>@Html.ActionLink("Logout", "Contact", "Home")</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                       Purchase Order
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View Purchase order", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Ask for Review", "About", "Home")</li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                       Quotations
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View PR", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Create Quotaion", "About", "Home")</li>
+                        <li>@Html.ActionLink("Update Quotaion", "Contact", "Home")</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Reports
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View Reports", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Delivery Reports", "Contact", "Home")</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+
+</div>
+
+

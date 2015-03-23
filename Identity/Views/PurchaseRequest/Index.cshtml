@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Identity.Models.PurchaseRequest>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Store_keeper_layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Issued_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Issue_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.current_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount_in_words)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Approved_budget)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Balance_over_budget)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.demandID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vendorname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.authorized_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.verified_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Authorization_date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Issued_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Issue_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.current_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount_in_words)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Approved_budget)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Balance_over_budget)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.demandID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vendorname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.authorized_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.verified_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Authorization_date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PR_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PR_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PR_ID })
+        </td>
+    </tr>
+}
+
+</table>

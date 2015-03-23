@@ -1,0 +1,54 @@
+﻿
+<div class="navbar-collapse collapse">
+    @Html.ActionLink("Teacher Panel", "admin_panel", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <ul class="nav navbar-nav">
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Profile
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View Profile", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Edit Profile", "About", "Home")</li>
+                        <li>@Html.ActionLink("Logout", "Contact", "Home")</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Purchase Requsation
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("Create PR", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Request From Store", "About", "Home")</li>
+                        <li>@Html.ActionLink("View My PR Status", "Contact", "Home")</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </li>
+
+
+    </ul>
+    @Html.Partial("_LoginPartial")
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+
+

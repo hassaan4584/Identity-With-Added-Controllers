@@ -1,0 +1,95 @@
+﻿<div class="navbar-collapse collapse">
+    @Html.ActionLink("Chair Person Panel", "admin_panel", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+     <ul class="nav navbar-nav">
+            <li>
+                <ul class="nav nav-tabs">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#">
+                            Profile
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- links -->
+                            <li>@Html.ActionLink("View Profile", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Edit Profile", "About", "Home")</li>
+                            <li>@Html.ActionLink("Logout", "Contact", "Home")</li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="nav nav-tabs">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#">
+                            Meeting
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- links -->
+
+                            <li>@Html.ActionLink("View All Meetings", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Call a Meetings", "About", "Home")</li>
+                            <li>@Html.ActionLink("View PR for Meetings", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("View Members for Meeting", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Postpone Meeting", "Contact", "Home")</li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="nav nav-tabs">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#">
+                            Vendors
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- links -->
+                            <li class="list-group-item">@Html.ActionLink("View Top vendor", "Contact", "Home")</li>
+                            <li class="list-group-item">@Html.ActionLink("Add Vendor", "Index", "Home")</li>
+                            <li class="list-group-item">@Html.ActionLink("Remove Vendor", "About", "Home")</li>
+                            <li class="list-group-item">@Html.ActionLink("Rate Vendor", "Contact", "Home")</li>
+                            <li class="list-group-item">@Html.ActionLink("Notify Vendor", "Contact", "Home")</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+            <li>
+                <ul class="nav nav-tabs">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#">
+                            Purchase Requisitions
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- links -->
+                             <li  class="list-group-item">@Html.ActionLink("View PR", "Index", "Home") </li >
+                             <li  class="list-group-item">@Html.ActionLink("Approved PRs", "About", "Home") </li >
+                             <li  class="list-group-item">@Html.ActionLink("Update PRs", "Contact", "Home") </li >
+                             <li  class="list-group-item">@Html.ActionLink("Pending PRs", "Contact", "Home") </li >
+                             <li  class="list-group-item">@Html.ActionLink("Rejected PRs", "Contact", "Home") </li >
+                             <li  class="list-group-item">@Html.ActionLink("Assign PRs for Meeting", "Contact", "Home") </li >
+                             <li  class="list-group-item">@Html.ActionLink("Call Quotaions for PR", "Contact", "Home") </li >
+                 
+                               </ul>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+
+</div>
+
+

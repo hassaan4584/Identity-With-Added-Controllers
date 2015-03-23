@@ -1,0 +1,104 @@
+﻿@model Identity.Models.LoginViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout_simple_header.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="styles/index.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+<!-- Button trigger modal -->
+
+<div class="intro">
+    <div id="wrapper">
+        <div id="image">
+            <img src="http://i1060.photobucket.com/albums/t444/tbogdanov80/me_zpsa1a8d28d.png" alt="me">
+        </div>
+        <div id="information">
+            <h4>Automated FAST-NU</h4>
+            <div id="user">
+                <a href="#"><img src="http://i1060.photobucket.com/albums/t444/tbogdanov80/map_zps6213a3c3.png"> FAST-NU, Lahore</a><br />
+                <p>
+                    Online system to automate the purchasing phenomenon at FAST-NU.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="follow">
+            <div id="follow_me">
+
+                <a data-toggle="modal" data-target="#myModal" href="#">Sign In</a>
+                <a href="#" class="btn btn-mybutton btn-lg" role="button">Visit Our site</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <p class="bg-success">Login</p>
+            </div>
+            <div class="modal-body">
+               @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+   
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.UserName)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>
+    </div>
+            
+           
+                          
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <div class="checkbox">
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe)
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Log in" class="btn btn-default" />
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Register", "Register") if you don't have a local account.
+    </p>
+
+
+
+}
+
+            </div>
+            <div class="modal-footer">
+
+                * Only for authorized Users of GPC
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

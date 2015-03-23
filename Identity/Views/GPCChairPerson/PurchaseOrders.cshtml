@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Identity.Models.PurchaseOrder>
+
+@{
+    ViewBag.Title = "PurchaseOrders";
+    Layout = "~/Views/Shared/Chairperson_gpc_Layout.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<h2>PurchaseOrders</h2>
+
+<p>
+@*    @Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VendorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VendorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovedBudget)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstimatedDeliveryDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherPurchaseOrderDetails)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VendorID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VendorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovedBudget)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstimatedDeliveryDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherPurchaseOrderDetails)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PurchaseOrderID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PurchaseOrderID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PurchaseOrderID })
+        </td>
+    </tr>
+}
+
+</table>

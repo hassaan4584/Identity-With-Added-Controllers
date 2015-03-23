@@ -1,0 +1,85 @@
+﻿<div class="navbar-collapse collapse">
+    @Html.ActionLink("Accounts Panel", "admin_panel", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <ul class="nav navbar-nav">
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Profile
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View Profile", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Edit Profile", "About", "Home")</li>
+                        <li>@Html.ActionLink("Logout", "Contact", "Home")</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Payments
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View Previous Payments", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Payment Reports", "About", "Home")</li>
+                        <li>@Html.ActionLink("Payment Draft", "Contact", "Home")</li>
+                       
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Purchase Requisition
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View Approved PR", "Index", "Home")</li>
+                       
+                        <li>@Html.ActionLink("Make Purchase order", "Contact", "Home")</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                       Budget
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View PRs Requested Budget", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Assign Buget", "About", "Home")</li>
+                        <li>@Html.ActionLink("Budget Reports", "Contact", "Home")</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+
+</div>
+
+
+

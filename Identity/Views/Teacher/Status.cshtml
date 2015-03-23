@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Identity.Models.DemandItem>
+
+@{
+    ViewBag.Title = "Status";
+    Layout = "~/Views/Shared/HOD_layout.cshtml";
+}
+
+<h2>Status</h2>
+
+<div>
+    <h4>DemandItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </dt>
+
+        <dd> 
+            @Html.DisplayFor(model => model.ItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Issued_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Issued_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Issue_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Issue_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.current_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.current_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.DemandID }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

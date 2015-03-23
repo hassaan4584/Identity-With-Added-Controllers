@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Identity.Models.DemandItem>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/HOD_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Issued_by)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Issue_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.current_status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Issued_by)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Issue_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.current_status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DemandID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DemandID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DemandID })
+        </td>
+    </tr>
+}
+
+</table>

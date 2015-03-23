@@ -1,0 +1,68 @@
+﻿
+<div class="navbar-collapse collapse">
+    @Html.ActionLink("Store Panel", "admin_panel", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <ul class="nav navbar-nav">
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Profile
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View Profile", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Edit Profile", "About", "Home")</li>
+                        <li>@Html.ActionLink("Logout", "Contact", "Home")</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Products
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("Receive", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Issue", "About", "Home")</li>
+                        <li>@Html.ActionLink("Product Reports", "Contact", "Home")</li>
+                       
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a class="dropdown-toggle"
+                       data-toggle="dropdown"
+                       href="#">
+                        Purchase Requisition
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- links -->
+                        <li>@Html.ActionLink("View PR", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Approved PRs", "About", "Home")</li>
+                        <li>@Html.ActionLink("Update PRs", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("View PRs Status", "Contact", "Home")</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </li>
+        
+    </ul>
+
+</div>
+
+

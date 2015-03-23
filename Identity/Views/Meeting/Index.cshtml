@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Identity.Models.Meeting>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Store_keeper_layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.agenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.venue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.calledBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.otherMeetingDetails)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.agenda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.venue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.calledBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.otherMeetingDetails)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MeetingID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MeetingID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MeetingID })
+        </td>
+    </tr>
+}
+
+</table>
